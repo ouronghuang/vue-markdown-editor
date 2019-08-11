@@ -1,59 +1,67 @@
-# viconfont
+## vue-markdown-editor
 
-[十一维度官方图标库](https://icon.11dom.com)
+具备 markdown 编辑器和 markdown 文本解析显示功能
 
-# 安装
+![](examples/images/1.png)
 
-1. 克隆源代码
+## 常规
 
-```
-git clone git@gitee.com:sywd-vr/viconfont.git
-```
+```html
+<link href="path/vue-markdown-editor.css" rel="stylesheet">
 
-2. 复制 `dist` 到项目目录，并更名为 viconfont（建议）
-
-```
-cp -r <path>/viconfont/dist <path>/viconfont
+<script src="path/vue-markdown-editor.js"></script>
 ```
 
-3. 通过 `link` 标签引入
+## NPM
+
+1. 安装
 
 ```
-<link href="<path>/viconfont/css/viconfont.css" rel="stylesheet">
+yarn add vue-markdown-editor --dev
 ```
 
-# 使用
+> 暂未上传到 NPM 上
 
-1. 通过 `i` 标签使用
-
-```
-<i class="viconfont vi-vip-designer"></i>
-```
-
-2. 放大图标
+2. 引入 js
 
 ```
-<i class="viconfont vi-vip-designer vi-lg"></i>
+import vueMarkdownEditor from 'vue-markdown-editor';
+
+Vue.use(vueMarkdownEditor);
 ```
 
-> 所有尺寸
-
-| vi-lg | vi-2x | vi-3x | vi-4x | vi-5x |
-| -------- | -------- | -------- | -------- | -------- |
-| 放大 33% | 2em | 3em | 4em | 5em |
-
-3. 使用动画
+3. 引入样式
 
 ```
-<i class="viconfont vi-vip-designer vi-spin"></i>
+@import "~vue-markdown-editor";
 ```
 
-> 所有动画
+## 使用编辑器
 
-| vi-spin | vi-pulse |
-| -------- | -------- |
-| linear | steps |
+```
+<vue-markdown-editor v-model="content"></vue-markdown-editor>
+```
 
-# 开发
+* 基于 [simplemde-markdown-editor](https://github.com/sparksuite/simplemde-markdown-editor)
 
-参照 [制作教程](./course/course.md)
+* props
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| value | markdown 文本，可以使用 v-model 双向绑定数据 | String | 空 |
+| options | 可传入 simplemde-markdown-editor 的所有配置 | Object | {} |
+| name | 表单 textarea 的 name 属性 | String | - |
+
+## 使用解析器
+
+```
+<vue-marked :value="content"></vue-marked>
+```
+
+* 使用 [highlight.js](https://github.com/highlightjs/highlight.js) 的 atom-one-dark 主题
+
+* props
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| value | markdown 文本 | String | 空 |
