@@ -1,5 +1,22 @@
 {
-    "private": true,
+    "name": "@orh/vue-markdown-editor",
+    "description": "Vue markdown editor and marked",
+    "keywords": [
+        "vue",
+        "markdown",
+        "markdown-editor",
+        "vue-markdown-editor",
+        "marked",
+        "vue-marked"
+    ],
+    "version": "1.0.0",
+    "main": "./dist/index.js",
+    "style": "./dist/css/index.css",
+    "sass": "./src/sass/index.scss",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ouronghuang/vue-markdown-editor"
+    },
     "scripts": {
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -9,6 +26,7 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
+    "dependencies": {},
     "devDependencies": {
         "cross-env": "^5.2.0",
         "highlight.js": "^9.15.9",
@@ -19,5 +37,11 @@
         "simplemde": "^1.11.2",
         "vue": "^2.6.10",
         "vue-template-compiler": "^2.6.10"
-    }
+    },
+    "author": "orh",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ouronghuang/vue-markdown-editor/issues"
+    },
+    "homepage": "https://github.com/ouronghuang/vue-markdown-editor"
 }

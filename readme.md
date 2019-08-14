@@ -7,9 +7,10 @@
 ## 常规
 
 ```html
-<link href="path/vue-markdown-editor.css" rel="stylesheet">
+<link href="path/vue-markdown-editor/index.css" rel="stylesheet">
 
-<script src="path/vue-markdown-editor.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+<script src="path/vue-markdown-editor/index.js"></script>
 ```
 
 ## NPM
@@ -17,10 +18,8 @@
 1. 安装
 
 ```
-yarn add vue-markdown-editor --dev
+yarn add @orh/vue-markdown-editor --dev
 ```
-
-> 暂未上传到 NPM 上
 
 2. 引入 js
 
@@ -42,7 +41,7 @@ Vue.use(vueMarkdownEditor);
 <vue-markdown-editor v-model="content"></vue-markdown-editor>
 ```
 
-* 基于 [simplemde-markdown-editor](https://github.com/sparksuite/simplemde-markdown-editor)
+* 使用 [simplemde-markdown-editor](https://github.com/sparksuite/simplemde-markdown-editor)
 
 * props
 
@@ -57,6 +56,8 @@ Vue.use(vueMarkdownEditor);
 ```
 <vue-marked :value="content"></vue-marked>
 ```
+
+* 使用 [marked](https://github.com/markedjs/marked)
 
 * 使用 [highlight.js](https://github.com/highlightjs/highlight.js) 的 atom-one-dark 主题
 
