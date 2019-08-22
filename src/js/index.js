@@ -8,9 +8,17 @@ const install = (Vue) => {
     Vue.component(Marked.name, Marked);
 };
 
-// auto install
+// Auto install
 if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(install);
+    install(window.Vue);
 }
 
-export default install;
+export {
+    install,
+    MarkdownEditor,
+    Marked
+};
+
+export default {
+    install
+};

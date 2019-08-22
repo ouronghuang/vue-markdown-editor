@@ -1,5 +1,5 @@
 <template>
-    <div class="vue-markdown-editor" :id="editorId"></div>
+    <div class="vue-marked" :id="editorId"></div>
 </template>
 
 <script>
