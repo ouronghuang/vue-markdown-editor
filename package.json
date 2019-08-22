@@ -9,8 +9,8 @@
         "marked",
         "vue-marked"
     ],
-    "version": "1.0.0",
-    "main": "./dist/index.js",
+    "version": "1.0.1",
+    "main": "./dist/js/index.js",
     "style": "./dist/css/index.css",
     "sass": "./src/sass/index.scss",
     "repository": {
