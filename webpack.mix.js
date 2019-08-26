@@ -1,8 +1,10 @@
 let mix = require('laravel-mix');
 
-mix.sass('src/sass/index.scss', 'dist/css')
-    .js('src/js/index.js', 'dist/js')
-    .setPublicPath('dist')
-    .options({
-        processCssUrls: false
-    });
+mix.js('src/js/index.js', 'dist/js')
+    .sass('src/sass/index.scss', 'dist/css');
+
+mix.webpackConfig({
+    output: {
+        libraryTarget: 'umd'
+    },
+});

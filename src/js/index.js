@@ -13,12 +13,4 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 }
 
-export {
-    install,
-    MarkdownEditor,
-    Marked
-};
-
-export default {
-    install
-};
+export default { install };
