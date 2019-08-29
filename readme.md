@@ -2,15 +2,15 @@
 
 具备 markdown 编辑器和 markdown 文本解析显示功能
 
-![](examples/images/1.png)
+![examples](examples/images/1.png)
 
 ## 常规
 
 ```html
-<link href="path/vue-markdown-editor/index.css" rel="stylesheet">
+<link href="path/vue-markdown-editor/css/index.css" rel="stylesheet">
 
 <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
-<script src="path/vue-markdown-editor/index.js"></script>
+<script src="path/vue-markdown-editor/js/index.js"></script>
 ```
 
 ## NPM
@@ -18,7 +18,7 @@
 1. 安装
 
 ```
-yarn add @orh/vue-markdown-editor --dev
+yarn add vue-markdown-editor-orh --dev
 ```
 
 2. 引入 js
@@ -32,7 +32,7 @@ Vue.use(vueMarkdownEditor);
 3. 引入样式
 
 ```
-@import "~vue-markdown-editor";
+@import "~vue-markdown-editor/src/sass/index";
 ```
 
 ## 使用编辑器
