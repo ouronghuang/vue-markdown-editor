@@ -24,7 +24,7 @@ yarn add vue-markdown-editor-orh --dev
 2. 引入 js
 
 ```
-import vueMarkdownEditor from 'vue-markdown-editor';
+import vueMarkdownEditor from 'vue-markdown-editor-orh';
 
 Vue.use(vueMarkdownEditor);
 ```
@@ -32,7 +32,7 @@ Vue.use(vueMarkdownEditor);
 3. 引入样式
 
 ```
-@import "~vue-markdown-editor/src/sass/index";
+@import "~vue-markdown-editor-orh/dist/css/index";
 ```
 
 ## 使用编辑器
