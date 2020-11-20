@@ -6,6 +6,9 @@
     <a href="https://www.npmjs.com/package/@orh/vue-markdown-editor">
         <img alt="npm" src="https://img.shields.io/npm/v/@orh/vue-markdown-editor">
     </a>
+    <a href="https://github.com/ouronghuang/vue-markdown-editor">
+        <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/ouronghuang/vue-markdown-editor">
+    </a>
 </p>
 
 具备 markdown 编辑器和 markdown 文本解析显示功能
