@@ -1,4 +1,12 @@
-## vue-markdown-editor
+<h1 align="center">
+    vue-markdown-editor
+</h1>
+
+<p align="center">
+    <a href="https://www.npmjs.com/package/@orh/vue-markdown-editor">
+        <img alt="npm" src="https://img.shields.io/npm/v/@orh/vue-markdown-editor">
+    </a>
+</p>
 
 具备 markdown 编辑器和 markdown 文本解析显示功能
 
@@ -18,21 +26,21 @@
 1. 安装
 
 ```
-yarn add vue-markdown-editor-orh --dev
+yarn add @orh/vue-markdown-editor --dev
 ```
 
 2. 引入 js
 
 ```
-import vueMarkdownEditor from 'vue-markdown-editor-orh';
+import VueMarkdownEditor from '@orh/vue-markdown-editor';
 
-Vue.use(vueMarkdownEditor);
+Vue.use(VueMarkdownEditor);
 ```
 
 3. 引入样式
 
 ```
-@import "~vue-markdown-editor-orh/dist/css/index";
+@import "~@orh/vue-markdown-editor/dist/css/index";
 ```
 
 ## 使用编辑器

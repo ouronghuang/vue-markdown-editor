@@ -1,5 +1,5 @@
 {
-    "name": "vue-markdown-editor-orh",
+    "name": "@orh/vue-markdown-editor",
     "description": "Vue markdown editor and marked",
     "keywords": [
         "vue",
