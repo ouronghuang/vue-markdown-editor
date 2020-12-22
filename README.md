@@ -34,7 +34,7 @@
 
 1. 安装
 
-```
+```shell
 yarn add @orh/vue-markdown-editor --dev
 ```
 
@@ -61,7 +61,7 @@ new Vue({
 
 - `resources/js/app.js`
 
-```
+```javascript
 import VueMarkdownEditor from '@orh/vue-markdown-editor';
 
 Vue.use(VueMarkdownEditor);
@@ -69,14 +69,14 @@ Vue.use(VueMarkdownEditor);
 
 - `resources/sass/app.scss`
 
-```
+```scss
 @import "~@orh/vue-markdown-editor/dist/css/themes/<theme>.css";
 @import "~@orh/vue-markdown-editor/dist/css/vue-markdown-editor.css";
 ```
 
 ## 使用编辑器
 
-```
+```html
 <vue-markdown-editor v-model="content"></vue-markdown-editor>
 ```
 
@@ -91,7 +91,7 @@ Vue.use(VueMarkdownEditor);
 
 ## 使用解析器
 
-```
+```html
 <vue-marked :value="content"></vue-marked>
 ```
 
