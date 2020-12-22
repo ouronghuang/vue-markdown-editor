@@ -6,7 +6,7 @@
     <a href="https://www.npmjs.com/package/@orh/vue-markdown-editor">
         <img alt="npm" src="https://img.shields.io/npm/v/@orh/vue-markdown-editor?color=ea2039">
     </a>
-    <a href="https://github.com/ouronghuang/vue-markdown-editor">
+    <a href="https://www.npmjs.com/package/@orh/vue-markdown-editor">
         <img alt="npm" src="https://img.shields.io/npm/dt/@orh/vue-markdown-editor?color=ea2039">
     </a>
     <a href="https://github.com/ouronghuang/vue-markdown-editor">
@@ -59,7 +59,7 @@ Vue.use(VueMarkdownEditor);
 <vue-markdown-editor v-model="content"></vue-markdown-editor>
 ```
 
-- 使用 [simplemde-markdown-editor](https://github.com/sparksuite/simplemde-markdown-editor)
+- [simplemde-markdown-editor](https://github.com/sparksuite/simplemde-markdown-editor)
 - Props
 
 | 属性 | 说明 | 类型 | 默认值 |
@@ -74,8 +74,8 @@ Vue.use(VueMarkdownEditor);
 <vue-marked :value="content"></vue-marked>
 ```
 
-- 使用 [marked](https://github.com/markedjs/marked)
-- 使用 [highlight.js](https://github.com/highlightjs/highlight.js)
+- [marked](https://github.com/markedjs/marked)
+- [highlight.js](https://github.com/highlightjs/highlight.js)
 - Props
 
 | 属性 | 说明 | 类型 | 默认值 |
