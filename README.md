@@ -35,7 +35,7 @@
 1. 安装
 
 ```shell
-yarn add @orh/vue-markdown-editor --dev
+$ yarn add @orh/vue-markdown-editor --dev
 ```
 
 2. 常规

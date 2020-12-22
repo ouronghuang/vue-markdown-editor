@@ -9,7 +9,7 @@
         "marked",
         "vue-marked"
     ],
-    "version": "3.0.3",
+    "version": "3.0.4",
     "main": "./dist/js/vue-markdown-editor.js",
     "style": "./dist/css/vue-markdown-editor.css",
     "sass": "./src/sass/vue-markdown-editor.scss",
