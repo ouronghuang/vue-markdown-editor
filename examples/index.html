@@ -1,42 +1,46 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>vue-markdown-editor</title>
-    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../dist/css/index.css" rel="stylesheet">
-    <style>
-        [v-cloak] {
-            display: none;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Vue markdown editor and marked</title>
+  <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../dist/css/themes/agate.css" rel="stylesheet">
+  <link href="../dist/css/vue-markdown-editor.css" rel="stylesheet">
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-<div id="app" v-cloak>
+  <div id="app" v-cloak>
     <div class="p-5">
-        <div class="row">
-            <div class="col-12 col-sm-6">
-                <vue-markdown-editor v-model="content"></vue-markdown-editor>
-            </div>
-            <div class="col-12 col-sm-6">
-                <vue-marked :value="content"></vue-marked>
-            </div>
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <vue-markdown-editor
+            v-model="content"
+          >
+          </vue-markdown-editor>
         </div>
+        <div class="col-12 col-sm-6">
+          <vue-marked
+            :value="content"
+          >
+          </vue-marked>
+        </div>
+      </div>
     </div>
-</div>
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/popper.js/1.15.0/umd/popper.min.js"></script>
-<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
-<script src="../dist/js/index.js"></script>
-<script>
+  </div>
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  <script src="../dist/js/vue-markdown-editor.js"></script>
+  <script>
     var app = new Vue({
-        el: '#app',
-        data: {
-            content: '# vue-markdown-editor',
-        }
+      el: '#app',
+      data: {
+        content: '## Vue markdown editor and marked\n\n```php\necho "hello world!"\n```'
+      }
     });
-</script>
+  </script>
 </body>
 </html>

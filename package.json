@@ -9,10 +9,10 @@
         "marked",
         "vue-marked"
     ],
-    "version": "2.0.1",
-    "main": "./dist/js/index.js",
-    "style": "./dist/css/index.css",
-    "sass": "./src/sass/index.scss",
+    "version": "3.0.0",
+    "main": "./dist/js/vue-markdown-editor.js",
+    "style": "./dist/css/vue-markdown-editor.css",
+    "sass": "./src/sass/vue-markdown-editor.scss",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/ouronghuang/vue-markdown-editor"
@@ -26,16 +26,16 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "cross-env": "^5.2.0",
-        "highlight.js": "^9.15.9",
-        "laravel-mix": "^4.1.2",
-        "marked": "^0.7.0",
-        "resolve-url-loader": "3.1.0",
-        "sass": "^1.17.2",
-        "sass-loader": "7.*",
-        "simplemde": "^1.11.2",
-        "vue": "^2.6.10",
-        "vue-template-compiler": "^2.6.10"
+        "cross-env": "~5.2.0",
+        "highlight.js": "~9.15.0",
+        "laravel-mix": "~5.0.0",
+        "marked": "~0.7.0",
+        "resolve-url-loader": "~3.1.0",
+        "sass": "~1.22.0",
+        "sass-loader": "~7.2.0",
+        "simplemde": "~1.11.0",
+        "vue": "~2.6.0",
+        "vue-template-compiler": "~2.6.0"
     },
     "author": "orh",
     "license": "MIT",
