@@ -18,7 +18,7 @@
 
 ![examples](examples/images/1.png)
 
-## 常规
+## 通过链接
 
 ```html
 <link href="<path>/dist/css/themes/<theme>.css" rel="stylesheet">
@@ -38,7 +38,28 @@
 yarn add @orh/vue-markdown-editor --dev
 ```
 
-2. 引入 js
+2. 常规
+
+- `main.js`
+
+```javascript
+import Vue from 'vue';
+import VueMarkdownEditor from '@orh/vue-markdown-editor';
+import '@orh/vue-markdown-editor/dist/css/themes/<theme>.css';
+import '@orh/vue-markdown-editor/dist/css/vue-markdown-editor.css';
+import App from './App.vue';
+
+Vue.use(VueMarkdownEditor);
+
+new Vue({
+  el: '#app',
+  render: h => h(App)
+});
+```
+
+3. Laravel
+
+- `resources/js/app.js`
 
 ```
 import VueMarkdownEditor from '@orh/vue-markdown-editor';
@@ -46,7 +67,7 @@ import VueMarkdownEditor from '@orh/vue-markdown-editor';
 Vue.use(VueMarkdownEditor);
 ```
 
-3. 引入样式
+- `resources/sass/app.scss`
 
 ```
 @import "~@orh/vue-markdown-editor/dist/css/themes/<theme>.css";
