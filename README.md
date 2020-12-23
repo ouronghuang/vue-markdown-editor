@@ -103,9 +103,11 @@ Vue.use(VueMarkdownEditor);
 | --- | --- | --- | --- |
 | value | markdown 文本 | String | 空 |
 
-## 可用主题
+## 代码高亮主题
 
-见 [主题目录](./dist/css/themes)
+- 使用 [marked](https://github.com/markedjs/marked) 时的代码高亮样式
+- 包含 [highlight.js](https://github.com/highlightjs/highlight.js) 的所有主题
+- [可用主题列表](./dist/css/themes)
 
 ## License
 
