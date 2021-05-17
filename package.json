@@ -1,46 +1,64 @@
 {
-    "name": "@orh/vue-markdown-editor",
-    "description": "Vue markdown editor and marked",
-    "keywords": [
-        "vue",
-        "markdown",
-        "markdown-editor",
-        "vue-markdown-editor",
-        "marked",
-        "vue-marked"
+  "name": "@orh/vue-markdown-editor",
+  "description": "Vue markdown editor and marked",
+  "keywords": [
+    "vue",
+    "markdown",
+    "markdown-editor",
+    "vue-markdown-editor",
+    "marked",
+    "vue-marked"
+  ],
+  "version": "4.0.0",
+  "main": "./src/index.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "highlight.js": "^10.7.2",
+    "marked": "^2.0.3",
+    "simplemde": "^1.11.2",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
     ],
-    "version": "3.0.5",
-    "main": "./dist/js/vue-markdown-editor.js",
-    "style": "./dist/css/vue-markdown-editor.css",
-    "sass": "./src/sass/vue-markdown-editor.scss",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ouronghuang/vue-markdown-editor"
+    "parserOptions": {
+      "parser": "babel-eslint"
     },
-    "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-    },
-    "devDependencies": {
-        "cross-env": "~5.2.0",
-        "highlight.js": "~9.15.0",
-        "laravel-mix": "~5.0.0",
-        "marked": "~0.7.0",
-        "resolve-url-loader": "~3.1.0",
-        "sass": "~1.22.0",
-        "sass-loader": "~7.2.0",
-        "simplemde": "~1.11.0",
-        "vue": "~2.6.0",
-        "vue-template-compiler": "~2.6.0"
-    },
-    "author": "orh",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/ouronghuang/vue-markdown-editor/issues"
-    },
-    "homepage": "https://github.com/ouronghuang/vue-markdown-editor"
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "author": "orh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouronghuang/vue-markdown-editor"
+  },
+  "bugs": {
+    "url": "https://github.com/ouronghuang/vue-markdown-editor/issues"
+  },
+  "homepage": "https://github.com/ouronghuang/vue-markdown-editor"
 }

@@ -16,38 +16,42 @@
 
 具备 markdown 编辑器和 marked 文本解析显示功能
 
-![examples](examples/images/1.png)
-
-## 通过链接
-
-```html
-<link href="<path>/dist/css/themes/<theme>.css" rel="stylesheet">
-<link href="<path>/dist/css/vue-markdown-editor.css" rel="stylesheet">
-
-<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
-<script src="<path>/dist/js/vue-markdown-editor.js"></script>
-```
-
-[示例](./examples/index.html)
-
-## NPM
+## Vue 3.x
 
 1. 安装
 
-```shell
-$ yarn add @orh/vue-markdown-editor --dev
+```bash
+$ yarn add @orh/vue-markdown-editor@4 highlight.js marked simplemde
 ```
 
-2. 常规
+2. 使用
 
-- `main.js`
+```javascript
+import { createApp } from 'vue';
+import App from './App.vue';
+import MarkdownEditor from '@orh/vue-markdown-editor';
+import 'simplemde/dist/simplemde.min.css';
+import 'highlight.js/styles/<theme>.css';
+
+createApp(App).use(MarkdownEditor).mount('#app')
+```
+
+## Vue 2.x
+
+1. 安装
+
+```bash
+$ yarn add @orh/vue-markdown-editor@3
+```
+
+2. 使用
 
 ```javascript
 import Vue from 'vue';
-import VueMarkdownEditor from '@orh/vue-markdown-editor';
-import '@orh/vue-markdown-editor/dist/css/themes/<theme>.css';
-import '@orh/vue-markdown-editor/dist/css/vue-markdown-editor.css';
 import App from './App.vue';
+import VueMarkdownEditor from '@orh/vue-markdown-editor';
+import '@orh/vue-markdown-editor/dist/css/vue-markdown-editor.css';
+import '@orh/vue-markdown-editor/dist/css/themes/<theme>.css';
 
 Vue.use(VueMarkdownEditor);
 
@@ -55,23 +59,6 @@ new Vue({
   el: '#app',
   render: h => h(App)
 });
-```
-
-3. Laravel
-
-- `resources/js/app.js`
-
-```javascript
-import VueMarkdownEditor from '@orh/vue-markdown-editor';
-
-Vue.use(VueMarkdownEditor);
-```
-
-- `resources/sass/app.scss`
-
-```scss
-@import "~@orh/vue-markdown-editor/dist/css/themes/<theme>.css";
-@import "~@orh/vue-markdown-editor/dist/css/vue-markdown-editor.css";
 ```
 
 ## 使用编辑器
@@ -107,7 +94,20 @@ Vue.use(VueMarkdownEditor);
 
 - 使用 [marked](https://github.com/markedjs/marked) 时的代码高亮样式
 - 包含 [highlight.js](https://github.com/highlightjs/highlight.js) 的所有主题
-- [可用主题列表](./dist/css/themes)
+
+## 本地开发/预览
+
+1. 安装依赖
+
+```
+$ yarn
+```
+
+2. 运行
+
+```
+$ yarn serve
+```
 
 ## License
 
