@@ -1,7 +1,7 @@
 <template>
   <div
-    :class="$options.name"
-    :id="id"
+      :class="$options.name"
+      :id="id"
   >
   </div>
 </template>
@@ -45,7 +45,8 @@ export default {
       const blocks = this.marked.querySelectorAll('pre code');
       blocks.forEach(block => {
         hljs.highlightElement(block);
-      })
+      });
+      this.$emit('rendered', this.marked.innerHTML);
     }
   }
 }

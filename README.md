@@ -79,7 +79,7 @@ new Vue({
 ## 使用解析器
 
 ```html
-<vue-marked :value="content"></vue-marked>
+<vue-marked :value="content" @rendered="handleRendered"></vue-marked>
 ```
 
 - [marked](https://github.com/markedjs/marked)
@@ -89,6 +89,12 @@ new Vue({
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | value | markdown 文本 | String | 空 |
+
+- Events
+
+| 事件 | 说明 | 回调参数 |
+| --- | --- | --- |
+| rendered | marked 渲染完成后触发 | 渲染后的 HTML 代码 |
 
 ## 代码高亮主题
 
