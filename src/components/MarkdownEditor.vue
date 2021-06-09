@@ -10,8 +10,9 @@
 
 <script>
 import SimpleMDE from 'simplemde';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'vue-markdown-editor',
   props: {
     modelValue: {
@@ -51,5 +52,5 @@ export default {
       this.$emit('update:modelValue', this.editor.value());
     });
   }
-}
+});
 </script>

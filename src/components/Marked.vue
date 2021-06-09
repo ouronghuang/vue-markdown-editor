@@ -9,8 +9,9 @@
 <script>
 import marked from 'marked';
 import hljs from 'highlight.js';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'vue-marked',
   props: {
     value: {
@@ -49,5 +50,5 @@ export default {
       this.$emit('rendered', this.marked.innerHTML);
     }
   }
-}
+});
 </script>
