@@ -14,17 +14,22 @@
     </a>
 </p>
 
-具备 markdown 编辑器和 marked 文本解析显示功能
+* 适用于 Vue 2/3 的具备 markdown 编辑器和 marked 文本解析显示功能
+* 基于 [simplemde-markdown-editor](https://github.com/sparksuite/simplemde-markdown-editor)
+* 基于 [marked](https://github.com/markedjs/marked)
+* 基于 [highlight.js](https://github.com/highlightjs/highlight.js)
+
+![demo](./demo.jpg)
 
 ## Vue 3.x
 
 1. 安装
 
 ```bash
-$ yarn add @orh/vue-markdown-editor@4 highlight.js marked simplemde
+$ yarn add @orh/vue-markdown-editor@4
 ```
 
-2. 使用
+2. 引入
 
 ```javascript
 import { createApp } from 'vue';
@@ -36,6 +41,10 @@ import 'highlight.js/styles/<theme>.css';
 createApp(App).use(MarkdownEditor).mount('#app')
 ```
 
+3. 使用
+
+[示例代码](./src/App.vue)
+
 ## Vue 2.x
 
 1. 安装
@@ -44,7 +53,7 @@ createApp(App).use(MarkdownEditor).mount('#app')
 $ yarn add @orh/vue-markdown-editor@3
 ```
 
-2. 使用
+2. 引入
 
 ```javascript
 import Vue from 'vue';
@@ -61,45 +70,37 @@ new Vue({
 });
 ```
 
-## 使用编辑器
+## 编辑器
 
 ```html
 <vue-markdown-editor v-model="content"></vue-markdown-editor>
 ```
 
-- [simplemde-markdown-editor](https://github.com/sparksuite/simplemde-markdown-editor)
-- Props
+### Props
 
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| value | markdown 文本，可以使用 v-model 双向绑定数据 | String | 空 |
-| options | 可传入 simplemde-markdown-editor 的所有配置 | Object | {} |
-| name | 表单 textarea 的 name 属性 | String | - |
+| `value` | `markdown` 文本，可以使用 `v-model` 双向绑定数据 | `String` | 空 |
+| `options` | 可传入 `simplemde-markdown-editor` 的所有配置 | `Object` | `{}` |
+| `name` | 表单 `textarea` 的 `name` 属性 | `String` | - |
 
-## 使用解析器
+## 解析器
 
 ```html
 <vue-marked :value="content" @rendered="handleRendered"></vue-marked>
 ```
 
-- [marked](https://github.com/markedjs/marked)
-- [highlight.js](https://github.com/highlightjs/highlight.js)
-- Props
+### Props
 
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| value | markdown 文本 | String | 空 |
+| `value` | `markdown` 文本 | `String` | 空 |
 
-- Events
+### Events
 
 | 事件 | 说明 | 回调参数 |
 | --- | --- | --- |
-| rendered | marked 渲染完成后触发 | 渲染后的 HTML 代码 |
-
-## 代码高亮主题
-
-- 使用 [marked](https://github.com/markedjs/marked) 时的代码高亮样式
-- 包含 [highlight.js](https://github.com/highlightjs/highlight.js) 的所有主题
+| `rendered` | `marked` 渲染完成后触发 | 渲染后的 `HTML` 代码 |
 
 ## 本地开发/预览
 
