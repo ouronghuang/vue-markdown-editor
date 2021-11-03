@@ -35,16 +35,23 @@ export default {
     }
   },
   mounted() {
-    const options = {
+    this.editor = new SimpleMDE({
       ...this.options,
+      initialValue: this.value,
       element: document.getElementById(this.id)
-    };
+    });
+    this.editor.codemirror.on('change', (instance, changeObj) => {
+      if (changeObj.origin === 'setValue') {
+        return;
+      }
 
-    this.editor = new SimpleMDE(options);
-    this.editor.value(this.value);
-    this.editor.codemirror.on('change', () => {
       this.$emit('input', this.editor.value());
     });
+  },
+  methods: {
+    updateEditorContent(content = null) {
+      this.editor.value(content || this.value);
+    }
   }
 }
 </script>

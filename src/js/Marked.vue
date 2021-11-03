@@ -25,8 +25,8 @@ export default {
   },
   watch: {
     value: {
-      handler(value) {
-        this.highlightBlock(value);
+      handler() {
+        this.highlightBlock();
       }
     }
   },
@@ -37,15 +37,16 @@ export default {
   },
   mounted() {
     this.marked = document.getElementById(this.id);
-    this.highlightBlock(this.value);
+    this.highlightBlock();
   },
   methods: {
-    highlightBlock(value) {
-      this.marked.innerHTML = marked(value);
+    highlightBlock() {
+      this.marked.innerHTML = marked(this.value);
       const blocks = this.marked.querySelectorAll('pre code');
       blocks.forEach(block => {
-        hljs.highlightBlock(block);
-      })
+        hljs.highlightElement(block);
+      });
+      this.$emit('rendered', this.marked.innerHTML);
     }
   }
 }
